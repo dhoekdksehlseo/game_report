@@ -19,19 +19,29 @@
     --red: #ef4444;
     --cyan: #22d3ee;
     --green: #10b981;
-    --text: #e2e8f0;
-    --muted: #94a3b8;
-    --faint: #475569;
+    --text: #f5f6fa;
+    --muted: #d4dce8;
+    --faint: #8a9ab8;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  p, li, span, td, th, div { color: inherit; }
+  p { color: #edf0f7; font-size: 13.5px; }
+  .game-card p, .full-card-body p { color: #edf0f7; font-size: 13.5px; }
+  .bullet-item span { color: #edf0f7; font-size: 13.5px; }
+  .game-card-technique { color: #edf0f7 !important; font-size: 13.5px; }
+  .compare-table td { color: #edf0f7 !important; font-size: 13.5px; }
+  .marketing-card p { color: #edf0f7 !important; font-size: 13.5px; }
+  .conclusion-point .cp-text { color: #edf0f7 !important; font-size: 13.5px; }
 
   body {
     background: var(--dark);
     color: var(--text);
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 13px;
     line-height: 1.8;
+    color: #f5f6fa;
   }
 
   /* ── HERO ── */
@@ -68,16 +78,17 @@
     animation: fadeUp 0.8s ease both;
   }
   .hero h1 {
-    font-family: 'Black Han Sans', sans-serif;
-    font-size: clamp(42px, 8vw, 88px);
-    line-height: 1.05;
-    letter-spacing: -2px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: clamp(36px, 7vw, 76px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -1px;
     background: linear-gradient(135deg, #fff 0%, var(--accent2) 50%, var(--cyan) 100%);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     animation: fadeUp 0.8s 0.15s ease both;
   }
   .hero-sub {
-    font-size: 16px; color: var(--muted); margin-top: 20px; letter-spacing: 1px;
+    font-size: 16px; color: #d4dce8; margin-top: 20px; letter-spacing: 1px;
     animation: fadeUp 0.8s 0.3s ease both;
   }
   .hero-meta {
@@ -96,7 +107,7 @@
     font-family: 'Black Han Sans', sans-serif;
     font-size: 28px; color: var(--accent2);
   }
-  .hero-stat .lbl { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .hero-stat .lbl { font-size: 12px; color: #d4dce8; margin-top: 2px; }
   .hero-scroll {
     position: absolute; bottom: 40px;
     display: flex; flex-direction: column; align-items: center; gap: 8px;
@@ -126,12 +137,13 @@
     min-width: 80px;
   }
   .section-title-block h2 {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
     font-size: 30px; color: #fff;
     letter-spacing: -0.5px;
   }
   .section-title-block p {
-    font-size: 14px; color: var(--muted); margin-top: 4px;
+    font-size: 14px; color: #d4dce8; margin-top: 4px;
   }
   .section-line {
     flex: 1; height: 1px;
@@ -179,10 +191,11 @@
   .tag-online { background: rgba(99,102,241,0.15); color: #818cf8; border: 1px solid rgba(99,102,241,0.3); }
 
   .game-card h3 {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
     font-size: 20px; margin-bottom: 8px; color: #fff;
   }
-  .game-card p { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
+  .game-card p { font-size: 13.5px; color: #d4dce8; line-height: 1.7; }
   .game-card-technique {
     margin-top: 14px; padding: 12px 14px;
     background: rgba(123,108,246,0.07);
@@ -215,10 +228,11 @@
     padding: 32px; display: flex; flex-direction: column; justify-content: center;
   }
   .full-card-body h3 {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
     font-size: 24px; margin: 12px 0 12px;
   }
-  .full-card-body p { font-size: 14px; color: var(--muted); line-height: 1.75; }
+  .full-card-body p { font-size: 14px; color: #d4dce8; line-height: 1.75; }
   .bullet-list { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
   .bullet-item {
     display: flex; gap: 10px; font-size: 13px; color: var(--text);
@@ -240,7 +254,7 @@
   .technique-card:hover { transform: translateY(-4px); border-color: rgba(123,108,246,0.4); }
   .tech-icon { font-size: 32px; margin-bottom: 12px; }
   .technique-card h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 6px; }
-  .technique-card p { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+  .technique-card p { font-size: 12.5px; color: #d4dce8; line-height: 1.6; }
   .tech-games { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 4px; }
   .tech-game-tag {
     font-size: 10px; padding: 2px 8px; border-radius: 4px;
@@ -251,13 +265,13 @@
   /* ── COMPARE TABLE ── */
   .compare-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
   .compare-table th { background: var(--dark3); padding: 14px 18px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-align: left; }
-  .compare-table th:first-child { color: var(--muted); }
+  .compare-table th:first-child { color: #d4dce8; }
   .compare-table th:nth-child(2) { color: var(--cyan); }
   .compare-table th:nth-child(3) { color: var(--gold); }
   .compare-table td { padding: 13px 18px; font-size: 13.5px; border-top: 1px solid var(--border); }
   .compare-table tr:nth-child(odd) td { background: rgba(255,255,255,0.01); }
   .compare-table tr:nth-child(even) td { background: rgba(255,255,255,0.03); }
-  .compare-table td:first-child { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+  .compare-table td:first-child { color: #d4dce8; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
   .compare-table tr:hover td { background: rgba(123,108,246,0.06); }
 
   /* ── MARKETING CARDS ── */
@@ -277,14 +291,14 @@
   .mc-gold::before { background: linear-gradient(to right, var(--gold), #f97316); }
   .mc-red::before { background: linear-gradient(to right, var(--red), #ec4899); }
   .marketing-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 6px; color: #fff; }
-  .marketing-card .mc-sub { font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .marketing-card .mc-sub { font-size: 11px; color: #d4dce8; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
   .mc-game { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
   .mc-game-name { font-size: 12px; font-weight: 700; color: var(--accent2); min-width: 80px; flex-shrink: 0; }
-  .mc-game-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .mc-game-desc { font-size: 13px; color: #d4dce8; line-height: 1.5; }
 
   /* ── REVENUE TABLE ── */
   .rev-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
-  .rev-table th { background: #0f0f1a; padding: 14px 16px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-align: center; border-bottom: 1px solid var(--border); }
+  .rev-table th { background: #0f0f1a; padding: 14px 16px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #d4dce8; text-align: center; border-bottom: 1px solid var(--border); }
   .rev-table td { padding: 14px 16px; font-size: 13.5px; text-align: center; border-top: 1px solid rgba(255,255,255,0.04); }
   .rev-table tr:hover td { background: rgba(123,108,246,0.06); }
   .rev-game-name { text-align: left !important; font-weight: 700; color: #fff; }
@@ -311,7 +325,7 @@
     font-size: 40px; color: rgba(123,108,246,0.3); line-height: 1;
   }
   .insight-box h4 { font-size: 14px; font-weight: 700; color: var(--accent2); margin: 8px 0 8px; }
-  .insight-box p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .insight-box p { font-size: 13px; color: #d4dce8; line-height: 1.6; }
 
   /* ── CONCLUSION ── */
   .conclusion {
@@ -325,12 +339,12 @@
     text-align: center;
   }
   .conclusion h2 {
-    font-family: 'Black Han Sans', sans-serif;
-    font-size: 32px; margin-bottom: 16px;
-    background: linear-gradient(135deg, #fff, var(--accent2));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 28px; margin-bottom: 16px;
+    color: #f5f6fa;
   }
-  .conclusion p { font-size: 15px; color: var(--muted); max-width: 640px; margin: 0 auto 36px; line-height: 1.8; }
+  .conclusion p { font-size: 13.5px; color: #edf0f7; max-width: 640px; margin: 0 auto 36px; line-height: 1.8; }
   .conclusion-points { display: flex; flex-direction: column; gap: 16px; text-align: left; max-width: 600px; margin: 0 auto; }
   .conclusion-point {
     display: flex; gap: 16px; align-items: flex-start;
@@ -341,7 +355,7 @@
     font-family: 'Black Han Sans', sans-serif;
     font-size: 22px; color: var(--accent); min-width: 32px;
   }
-  .cp-text { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .cp-text { font-size: 13.5px; color: #edf0f7; line-height: 1.7; }
 
   /* ── DIVIDER ── */
   .divider {
@@ -363,7 +377,7 @@
   /* ── CHART TABS ── */
   .chart-tab {
     padding: 8px 20px; border-radius: 100px; font-size: 13px; font-weight: 600;
-    border: 1px solid var(--border); background: transparent; color: var(--muted);
+    border: 1px solid var(--border); background: transparent; color: #d4dce8;
     cursor: pointer; transition: all 0.2s; font-family: 'Noto Sans KR', sans-serif;
   }
   .chart-tab:hover { border-color: var(--accent); color: var(--accent2); }
@@ -784,7 +798,7 @@
     <div style="padding:28px;border-radius:16px;border:1px solid rgba(34,211,238,0.2);background:rgba(34,211,238,0.04);">
       <p style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;font-weight:700;">온라인 게임 사례</p>
       <h4 style="font-size:16px;font-weight:700;margin-bottom:10px;color:#fff;">메이플스토리</h4>
-      <p style="font-size:13.5px;color:var(--muted);line-height:1.7;">10년 넘게 '검은 마법사 토벌'을 목표로 유지. 격파 후에도 인과관계 균열로 새 흑막 등장 → 완결이 아닌 확장으로 유저 기대감 지속.</p>
+      <p style="font-size:13.5px;color:#d4dce8;line-height:1.7;">10년 넘게 '검은 마법사 토벌'을 목표로 유지. 격파 후에도 인과관계 균열로 새 흑막 등장 → 완결이 아닌 확장으로 유저 기대감 지속.</p>
       <div style="margin-top:16px;padding:12px;background:rgba(0,0,0,0.2);border-radius:8px;font-size:13px;color:var(--cyan);">
         💡 파이널 판타지 XIV는 서비스 종료를 '세계멸망' 시나리오로 승화 — 완결과 종료를 결합한 성공 사례
       </div>
@@ -792,7 +806,7 @@
     <div style="padding:28px;border-radius:16px;border:1px solid rgba(245,158,11,0.2);background:rgba(245,158,11,0.04);">
       <p style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:700;">패키지 게임 사례</p>
       <h4 style="font-size:16px;font-weight:700;margin-bottom:10px;color:#fff;">라스트 오브 어스 파트 1</h4>
-      <p style="font-size:13.5px;color:var(--muted);line-height:1.7;">조엘과 엘리의 관계가 임무 관계→부녀 관계로 자연스럽게 변화. NPC 동행 구조로 플레이어도 동일한 감정 변화 체험.</p>
+      <p style="font-size:13.5px;color:#d4dce8;line-height:1.7;">조엘과 엘리의 관계가 임무 관계→부녀 관계로 자연스럽게 변화. NPC 동행 구조로 플레이어도 동일한 감정 변화 체험.</p>
       <div style="margin-top:16px;padding:12px;background:rgba(0,0,0,0.2);border-radius:8px;font-size:13px;color:var(--gold);">
         💡 DLC는 미래가 아닌 과거 시점으로 구성 — 메인 스토리 여운을 훼손하지 않으면서 보완
       </div>
@@ -899,22 +913,22 @@
   <!-- CHART CONTAINER -->
   <div style="background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:32px;margin-bottom:24px;">
     <div id="chart-revenue" class="chart-panel">
-      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">총 수익 추정 (단위: 억 달러)</div>
+      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#d4dce8;margin-bottom:16px;">총 수익 추정 (단위: 억 달러)</div>
       <canvas id="revenueChart" height="90"></canvas>
     </div>
     <div id="chart-sales" class="chart-panel" style="display:none;">
-      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">누적 판매량 (단위: 만 장/명)</div>
+      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#d4dce8;margin-bottom:16px;">누적 판매량 (단위: 만 장/명)</div>
       <canvas id="salesChart" height="90"></canvas>
     </div>
     <div id="chart-dau" class="chart-panel" style="display:none;">
-      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">최고 동시접속자 수 (단위: 만 명)</div>
+      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#d4dce8;margin-bottom:16px;">최고 동시접속자 수 (단위: 만 명)</div>
       <canvas id="dauChart" height="90"></canvas>
     </div>
   </div>
 
   <!-- SCATTER: 가격 vs 수익 -->
   <div style="background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:32px;margin-bottom:24px;">
-    <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">가격 vs 총 수익 상관관계</div>
+    <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#d4dce8;margin-bottom:4px;">가격 vs 총 수익 상관관계</div>
     <div style="font-size:13px;color:var(--faint);margin-bottom:16px;">높은 가격 = 높은 수익? 반드시 그렇지 않다</div>
     <canvas id="scatterChart" height="70"></canvas>
   </div>
@@ -985,15 +999,15 @@
 
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px;">
     <div style="padding:24px;border-radius:14px;border:1px solid var(--border);background:var(--panel);">
-      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">저가 고판매량</div>
+      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#d4dce8;margin-bottom:8px;">저가 고판매량</div>
       <p style="font-size:13.5px;color:var(--text);line-height:1.6;">팰월드($29.99)와 헬다이버즈($40)는 저가에도 폭발적 판매량으로 고가 게임에 필적하는 총 수익 달성.</p>
     </div>
     <div style="padding:24px;border-radius:14px;border:1px solid var(--border);background:var(--panel);">
-      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">DAU ≠ 총 수익</div>
+      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#d4dce8;margin-bottom:8px;">DAU ≠ 총 수익</div>
       <p style="font-size:13.5px;color:var(--text);line-height:1.6;">스텔라 블레이드는 동시접속 19.2만이지만 총 수익 $1억+. DAU 피크와 총 수익은 반드시 비례하지 않음.</p>
     </div>
     <div style="padding:24px;border-radius:14px;border:1px solid var(--border);background:var(--panel);">
-      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">DLC 전략</div>
+      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#d4dce8;margin-bottom:8px;">DLC 전략</div>
       <p style="font-size:13.5px;color:var(--text);line-height:1.6;">초기 판매 이후 DLC·이벤트로 수익 하락 곡선을 완화. 패키지 게임 수익 연장의 핵심 수단.</p>
     </div>
   </div>
@@ -1158,24 +1172,60 @@ function switchChart(type) {
 <!-- ══════════════════════════ CONCLUSION ══════════════════════════ -->
 <div class="container">
   <div class="conclusion">
-    <h2>종합 분석 및 시사점</h2>
-    <p>스팀 최고 인기 게임들이 공통적으로 가진 성공 공식 세 가지</p>
+    <h2>주관적 의견</h2>
+    <p>게임들을 분석하며 느낀 개인적인 의견과 인사이트</p>
     <div class="conclusion-points">
-      <div class="conclusion-point">
+      <div class="conclusion-point" onclick="toggleDetail('detail1')" style="cursor:pointer;">
         <div class="cp-num">1</div>
-        <div class="cp-text"><strong style="color:var(--accent2);">유저를 능동적 해석자로 만드는 시나리오</strong><br>설정을 직접 설명하지 않고 오브젝트·텍스트·연출로 간접 암시. 유저 스스로 퍼즐을 맞추도록 설계.</div>
+        <div class="cp-text">
+          <strong style="color:var(--accent2);">유저를 능동적 해석자로 만드는 시나리오</strong><br>
+          설정을 직접 설명하지 않고 오브젝트·텍스트·연출로 간접 암시. 유저 스스로 퍼즐을 맞추도록 설계.
+          <span style="font-size:11px;color:var(--faint);margin-left:8px;">▼ 자세히</span>
+        </div>
       </div>
-      <div class="conclusion-point">
+      <div id="detail1" style="display:none;margin:-8px 0 16px 0;padding:16px 20px;background:rgba(123,108,246,0.07);border-left:3px solid var(--accent2);border-radius:0 8px 8px 0;font-size:13.5px;color:#edf0f7;line-height:1.8;">
+        <p style="margin-bottom:8px;">대부분의 게임에서 쓰는 방식이지만 특히 공포게임에서는 사건의 진행 과정 등을 알 수 있기에 더 적극적으로 활용합니다.</p>
+        <p style="margin-bottom:8px;">파피 플레이타임에서도 <em>왜 직원들이 다 사라졌는가?</em>, <em>왜 인형들이 움직이는가?</em> 에 대한 떡밥을 담고 있습니다.</p>
+        <p>바이오하자드 레퀴엠에서도 그레이스 파트에 나오는 추격자 '더 걸'에 대한 서사와 진행과정을 직접적으로 말해주는 것이 아닌 게임 플레이 중에 얻을 수 있는 자료 텍스트로 묘사하였습니다.</p>
+      </div>
+
+      <div class="conclusion-point" onclick="toggleDetail('detail2')" style="cursor:pointer;">
         <div class="cp-num">2</div>
-        <div class="cp-text"><strong style="color:var(--cyan);">시각적 충격과 감정적 공감을 동시에 자극하는 마케팅</strong><br>트레일러의 그래픽 충격으로 화제성을 잡고, 감정 드라마로 충성 유저를 확보.</div>
+        <div class="cp-text">
+          <strong style="color:var(--cyan);">시각적 충격과 감정적 공감을 동시에 자극하는 마케팅</strong><br>
+          트레일러의 그래픽 충격으로 화제성을 잡고, 감정 드라마로 충성 유저를 확보.
+          <span style="font-size:11px;color:var(--faint);margin-left:8px;">▼ 자세히</span>
+        </div>
       </div>
-      <div class="conclusion-point">
+      <div id="detail2" style="display:none;margin:-8px 0 16px 0;padding:16px 20px;background:rgba(34,211,238,0.07);border-left:3px solid var(--cyan);border-radius:0 8px 8px 0;font-size:13.5px;color:#edf0f7;line-height:1.8;">
+        <p style="margin-bottom:8px;">게임 첫 소개 시 유저들은 게임의 그래픽, 액션, 컨셉 등을 중요하게 보기 때문에 게임사에서는 스토리가 중심이 아닌 <em>우리는 이런 것을 구현할 수 있다</em>, 이런 액션에 중점을 뒀다는 기술적인 소개를 많이 보입니다. 또는 세계관에 맞는 컨셉 등이 대표적입니다.</p>
+        <p>리틀 나이트메어는 몽환적인 그래픽과 컨셉으로 첫 등장 시 유저들의 눈길을 사로잡아 기대작 반열에 들어갔으며, 그의 정신적 후속작 취급을 받는 리애니멀 또한 같은 전철로 스토리가 아닌 컨셉과 분위기에 환호한 케이스입니다.</p>
+      </div>
+
+      <div class="conclusion-point" onclick="toggleDetail('detail3')" style="cursor:pointer;">
         <div class="cp-num">3</div>
-        <div class="cp-text"><strong style="color:var(--gold);">초기 판매 + DLC·이벤트로 수익 곡선 지속성 확보</strong><br>패키지 게임의 급락하는 DAU를 DLC와 콘텐츠 업데이트로 보완하여 수익을 연장.</div>
+        <div class="cp-text">
+          <strong style="color:var(--gold);">초기 판매 + DLC·이벤트로 수익 곡선 지속성 확보</strong><br>
+          패키지 게임의 급락하는 DAU를 DLC와 콘텐츠 업데이트로 보완하여 수익을 연장.
+          <span style="font-size:11px;color:var(--faint);margin-left:8px;">▼ 자세히</span>
+        </div>
+      </div>
+      <div id="detail3" style="display:none;margin:-8px 0 16px 0;padding:16px 20px;background:rgba(245,158,11,0.07);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;font-size:13.5px;color:#edf0f7;line-height:1.8;">
+        <p>패키지 게임은 온라인 게임과 다르게 완결성을 띠며 지속적인 수입이 아닌 초기 판매량으로 승부하기 때문에 추가 DLC 같은 업데이트를 활용해 유저들에게 추가적인 스토리, 콘텐츠를 선보입니다.</p>
       </div>
     </div>
   </div>
 </div>
 
+<script>
+function toggleDetail(id) {
+  const el = document.getElementById(id);
+  const isOpen = el.style.display === 'block';
+  ['detail1','detail2','detail3'].forEach(d => {
+    document.getElementById(d).style.display = 'none';
+  });
+  if (!isOpen) el.style.display = 'block';
+}
+</script>
 </body>
 </html>
